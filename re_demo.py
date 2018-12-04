@@ -77,3 +77,13 @@ print("-----------------")
 # split (用正则分割字符串)
 a = "1234 abc  456"
 print(re.split("\s+", a))
+print("--------------------")
+# 别名 ？P<name>
+url = 'userList/zhang'
+p = re.compile(r'^userList/(?P<username>\w+)')
+m = p.match(url)
+if m is not None:
+    print("m.group()", m.group())
+    print("m.group(0)", m.group(0))
+    print("m.group(1)", m.group(1))
+    print("m.group('username')", m.group('username'))

@@ -23,6 +23,17 @@ def func_return(a):
         return a, 12
 
 
+def func_out(func):
+    func
+
+
+def func_inner1():
+    print("this is first inner")
+
+
+def func_inner2():
+    print("this is second inner")
+
 if __name__ == '__main__':
     func()
     a = [1, 2, 3]
@@ -40,3 +51,6 @@ if __name__ == '__main__':
     print(func_return('456'))
     print(func_return('789'))
     print(func_return('abc'))
+    print("-------------")
+    func_out(func_inner1())
+    func_out(func_inner2())
